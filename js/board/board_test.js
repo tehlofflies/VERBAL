@@ -18,6 +18,8 @@ var theFunctionToCallWhenTheDocumentIsReady = function() {
 
 	var phrase = "";
 
+	var player1 = true;
+
 	var initializePoints = function() {
 
 		gRef.once("value", function(firebaseSnapshot) {
@@ -44,28 +46,43 @@ var theFunctionToCallWhenTheDocumentIsReady = function() {
 		console.log("So far so gooooood.");
 
 		if(contains(wordsSpoken, phrase)) {
+		  if (player1) {
 		  $("#g-logo").effect("bounce");
 
-		  var incrementGryffindorPointsByAdditionalPoints = function(curPoints) {
-		    var newTotalPoints = curPoints + additionalPoints;
-		    $("#g-points").html(newTotalPoints);
-		    return newTotalPoints;
-		  }
-		  gRef.transaction(incrementGryffindorPointsByAdditionalPoints);
+			  var incrementGryffindorPointsByAdditionalPoints = function(curPoints) {
+			    var newTotalPoints = curPoints + additionalPoints;
+			    $("#g-points").html(newTotalPoints);
+			    return newTotalPoints;
+			  }
+			  gRef.transaction(incrementGryffindorPointsByAdditionalPoints);
+			}
+		  else {
+		  	$("#s-logo").effect("bounce");
 
+			  var incrementSlytherinPointsByAdditionalPoints = function(curPoints) {
+			    var newTotalPoints = curPoints + additionalPoints;
+			    $("#s-points").html(newTotalPoints);
+			    return newTotalPoints;
+			  }
+			  sRef.transaction(incrementSlytherinPointsByAdditionalPoints);
+		  }
 		  phrase = randomize(phrases);
 		  $("#phrase").html(phrase);
 		}
 
 		else if(contains(wordsSpoken, "slytherin")) {
-		  $("#s-logo").effect("bounce");
+			if (player1) {
+			  document.getElementById("player1").style.color = "grey";
+			  document.getElementById("player2").style.color = "white";
+			}
+			else {
+			  document.getElementById("player1").style.color = "white";
+			  document.getElementById("player2").style.color = "grey";
+			}
+		  player1 = !player1;
+		  phrase = randomize(phrases);
+		  $("#phrase").html(phrase);
 
-		  var incrementSlytherinPointsByAdditionalPoints = function(curPoints) {
-		    var newTotalPoints = curPoints + additionalPoints;
-		    $("#s-points").html(newTotalPoints);
-		    return newTotalPoints;
-		  }
-		  sRef.transaction(incrementSlytherinPointsByAdditionalPoints);
 		}
 	}
 

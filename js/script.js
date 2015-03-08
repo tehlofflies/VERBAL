@@ -16,6 +16,10 @@ function displayOutput2() {
    document.getElementById("player2").innerHTML = userName;
 }
 
+function switchPlayer() {
+    return !player1;
+}
+
 var randomize = function(phrases) {
     var index = Math.floor(Math.random() * 548) + 1;
     return phrases[index];
@@ -44,10 +48,11 @@ $(document).ready(function() {
         $("#player1").fadeIn(500);
         $("#player2").fadeIn(500);
         $(".hide3").fadeIn(500);
-        $(".hide4").delay(10000).fadeIn(500);
+        $(".hide4").delay(1500).fadeIn(500);
     });
     $("#newPhrase").click(function() {
-        $("phrase").html(randomize(phrases));
+        phrase = randomize(phrases);
+        $("#phrase").html(phrase);
         $(".hide3").show();
     });
     
