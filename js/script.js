@@ -21,7 +21,7 @@ $(document).ready(function() {
         $(".hide1").fadeOut(1500); 
     },
     function() {
-        $(".hide2").fadeIn(1000);
+        $(".hide2").delay(500).fadeIn(1000);
     });
 
     $("#submitButton1").click(function() {
