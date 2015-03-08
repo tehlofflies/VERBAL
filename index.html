@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/board.css">
-    <link rel="stylesheet" href="css/libs/foundation.essentials.min.css">
-
 </head>
 <body>
 
@@ -22,7 +19,7 @@
             <h1 class="hide1">V e r b a l</h1>
     
             <div class="row">
-                <div class="small-3 columns">
+                <div class="col-md-4">
                     <img src="img/grumpycat.png" class="hide3" style="display:none; height:50px">
                 
                     <h3 id="player1" class="hide2" style="display:none">player one</h3>
@@ -30,11 +27,11 @@
                     <input type="submit" id="submitButton1" class="hide2" style="display:none" value="submit." onclick="displayOutput1()" />
                 </div>
 
-                <div class="small-3 columns">
-                    <p id="phrase"></p>
+                <div class="col-md-4">
+                    <p id="phrase" class="hide3"></p>
                 </div>
             
-                <div class="small-3 columns">
+                <div class="col-md-4">
                     <img src="img/grumpycat.png" class="hide3" style="display:none; height:50px">
       
                     <h3 id="player2" class="hide2" style="display:none" >player two</h3>
@@ -44,17 +41,18 @@
             </div>
 
             <div class="row points">
-                <div class="small-3 columns">
+                <div class="col-md-4">
                   <p id="g-points">0</p>
                 </div>
-                <div class="small-3 columns">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
                   <p id="s-points">0</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="small-12 columns">
-                    <textarea id="transcription" placeholder="Click 'Allow' to allow me to use the microphone. Then try saying something like '10 points for Gryffindor' and waving your phone around after you've visited the above URL"></textarea>    
+                    <textarea id="transcription" placeholder="Click 'Allow' to allow me to use the microphone."></textarea>    
                 </div>
             </div>
 
@@ -63,7 +61,8 @@
     
     <div class="playing">
         <div class="container">
-            <button class="hide2" style="display:none">let's play.</button>   
+            <button class="hide2" style="display:none">let's play.</button>
+            <button id="showCount" class="hide4" style="display:none" onclick="scoreCounter()">play again.</button>   
         </div>
     </div>
 
