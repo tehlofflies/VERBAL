@@ -23,9 +23,18 @@ $(document).ready(function() {
     function() {
         $(".hide2").fadeIn(1000);
     });
+
+    $("#submitButton1").click(function() {
+        $("#userInput1").hide();
+        $("#submitButton1").hide();
+    })
+
+    $("#submitButton2").click(function() {
+        $("#userInput2").hide();
+        $("#submitButton2").hide();
+    })
     
     $("button").click(function() {
-        $(".hide2").fadeOut(1000);
         $("#player1").fadeIn(500);
         $("#player2").fadeIn(500);
         $(".hide3").fadeIn(3000);
