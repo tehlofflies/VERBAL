@@ -16,6 +16,11 @@ function displayOutput2() {
    document.getElementById("player2").innerHTML = userName;
 }
 
+var randomize = function(phrases) {
+    var index = Math.floor(Math.random() * 548) + 1;
+    return phrases[index];
+}
+
 $(document).ready(function() {
     $("h1").hover(function() {
         $(".hide1").fadeOut(1500); 
@@ -41,9 +46,9 @@ $(document).ready(function() {
         $(".hide3").fadeIn(500);
         $(".hide4").delay(10000).fadeIn(500);
     });
-
     $("#newPhrase").click(function() {
-        $("button").html(initialize());
+        $("phrase").html(randomize(phrases));
+        $(".hide3").show();
     });
     
 });

@@ -40,6 +40,10 @@ body {
     font-size: 20px;
 }
 
+.col-md-4 .div {
+    color: #fff;
+}
+
 .row p {
     color: #fff;
     font-weight: bold;
