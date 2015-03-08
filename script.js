@@ -18,13 +18,17 @@ function displayOutput2() {
 
 $(document).ready(function() {
     $("h1").hover(function() {
-        $(".hide").fadeOut(1500); 
+        $(".hide1").fadeOut(1500); 
     },
     function() {
-        $(".hide1").fadeIn(1000);
+        $(".hide2").fadeIn(1000);
     });
     
     $("button").click(function() {
-        $(".hide1").fadeOut(1000);
+        $(".hide2").fadeOut(1000);
+        $("#player1").fadeIn(500);
+        $("#player2").fadeIn(500);
+        $(".hide3").fadeIn(3000);
     });
+    
 });
