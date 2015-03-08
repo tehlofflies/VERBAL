@@ -1,0 +1,19 @@
+.container {
+  margin-left: auto;
+  margin-top: auto;
+
+  text-align: center;
+}
+
+.heading {
+  font-family: "Harry Potter";
+  font-size: 4em;
+}
+
+.button {
+  font-size: 4em;
+}
+
+.hide {
+  display: none;
+}
