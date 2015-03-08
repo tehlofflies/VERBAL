@@ -1,7 +1,5 @@
 // Test browser support
-window.SpeechRecognition = window.SpeechRecognition       ||
-window.webkitSpeechRecognition ||
-null;
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || null;
 
 if (window.SpeechRecognition === null) {
   document.getElementById('ws-unsupported').classList.remove('hidden');

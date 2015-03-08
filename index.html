@@ -11,32 +11,31 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="css/board.css">
-    <link rel="stylesheet" href="css/libs/foundation.essentials.min.css">
 
 </head>
 <body>
 
     <div class="main">
         <div class="container">
-        
+
             <h1 class="hide1">V e r b a l</h1>
-    
+
             <div class="row">
                 <div class="small-3 columns">
                     <img src="img/grumpycat.png" class="hide3" style="display:none; height:50px">
-                
+
                     <h3 id="player1" class="hide2" style="display:none">player one</h3>
                     <input type="text" id="userInput1" class="hide2" style="display:none" placeholder = "player one name" />
                     <input type="submit" id="submitButton1" class="hide2" style="display:none" value="submit." onclick="displayOutput1()" />
                 </div>
 
                 <div class="small-3 columns">
-                    <p id="phrase"></p>
+                    <h1 id="phrase" class="hide3" style="display:none"></h1>
                 </div>
-            
+
                 <div class="small-3 columns">
                     <img src="img/grumpycat.png" class="hide3" style="display:none; height:50px">
-      
+
                     <h3 id="player2" class="hide2" style="display:none" >player two</h3>
                     <input type="text" id="userInput2" class="hide2" style="display:none" placeholder="player two name" />
                     <input type="submit" id="submitButton2" class="hide2" style="display:none" value="submit." onclick="displayOutput2()" />
@@ -45,16 +44,17 @@
 
             <div class="row points">
                 <div class="small-3 columns">
-                  <p id="g-points">0</p>
+                    <p id="g-points" class="hide3" style="display:none">0</p>
                 </div>
                 <div class="small-3 columns">
-                  <p id="s-points">0</p>
+                <p id="s-points" class="hide3" style="display:none">0</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="small-12 columns">
-                    <textarea id="transcription" placeholder="Click 'Allow' to allow me to use the microphone. Then try saying something like '10 points for Gryffindor' and waving your phone around after you've visited the above URL"></textarea>    
+                    <textarea id="transcription" placeholder="Click 'Allow' to allow me to use the microphone. Then try saying something like '10 points for Gryffindor'">
+                    </textarea>    
                 </div>
             </div>
 
