@@ -1,2 +1,0 @@
-# VERBAL
-spring hackNY project
