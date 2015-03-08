@@ -46,6 +46,7 @@
         $("#s-points").html(numPoints);
       }
     });
+    
     phrase = randomize(phrases);
     $("#phrase").html(phrase);
   }

@@ -41,5 +41,9 @@ $(document).ready(function() {
         $(".hide3").fadeIn(500);
         $(".hide4").delay(10000).fadeIn(500);
     });
+
+    $("#newPhrase").click(function() {
+        $("button").html(initialize());
+    });
     
 });
