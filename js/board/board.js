@@ -11,7 +11,7 @@
 
   var getPointsFromString = function(string) {
     var arrayOfThingsThatLookLikeNumbers = string.match( /(\d+)/gm );
-    var firstMatch = arrayOfThingsThatLookLikeNumbers[0]
+    var firstMatch = arrayOfThingsThatLookLikeNumbers[0];
     var points = parseInt(firstMatch);
     return points;
   }
@@ -33,7 +33,7 @@
         gRef.set(0);
       }
       else {
-        $("#g-points").html(numPoints);
+        $("#g-points").html(0);
       }
     });
 
