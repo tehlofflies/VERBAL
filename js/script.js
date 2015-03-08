@@ -35,6 +35,7 @@ $(document).ready(function() {
     })
     
     $("button").click(function() {
+        $(".hide2").fadeOut(500);
         $("#player1").fadeIn(500);
         $("#player2").fadeIn(500);
         $(".hide3").fadeIn(3000);
