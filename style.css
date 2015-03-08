@@ -1,0 +1,19 @@
+body {
+    background-color: #FA8258;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.main h1 {
+    margin-left: auto ;
+    margin-right: auto ;
+    font-size: 120px;
+    text-transform: uppercase;
+}
