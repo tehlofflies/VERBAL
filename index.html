@@ -9,6 +9,7 @@
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -16,21 +17,33 @@
     <div class="main">
         <div class="container">
         
-            <h1 class="hide">V e r b a l</h1>
+            <h1 class="hide1">V e r b a l</h1>
     
-            <h3 id="player1" class="hide1" style="display:none">Player 1</h3>
-            <input type="text" id="userInput1" class="hide1" style="display:none" placeholder = "Player 1 name" />
-            <input type="submit" id="submitButton1" class="hide1" style="display:none" value="Submit" onclick="displayOutput1()" />
+            <div class="pull-left">
+                <img src="https://sketchingwithhardware.files.wordpress.com/2014/04/grumpycat.png" class="hide3" style="display:none; height:50px">
             
-            <h3 id="player2" class="hide1" style="display:none" >Player 2</h3>
-            <input type="text" id="userInput2" class="hide1" style="display:none" placeholder="Player 2 name" />
-            <input type="submit" id="submitButton2" class="hide1" style="display:none" value="Submit" onclick="displayOutput2()" />
+                <h3 id="player1" class="hide2" style="display:none">player one</h3>
+                <input type="text" id="userInput1" class="hide2" style="display:none" placeholder = "player one name" />
+                <input type="submit" id="submitButton1" class="hide2" style="display:none" value="submit." onclick="displayOutput1()" />
+            </div>
+            
+            <div class="pull-right">
+                <img src="https://sketchingwithhardware.files.wordpress.com/2014/04/grumpycat.png" class="hide3" style="display:none; height:50px">
+  
+                <h3 id="player2" class="hide2" style="display:none" >player two</h3>
+                <input type="text" id="userInput2" class="hide2" style="display:none" placeholder="player two name" />
+                <input type="submit" id="submitButton2" class="hide2" style="display:none" value="submit." onclick="displayOutput2()" />
+            </div>
 
-            <br><br>
-            <button class="hide1" style="display:none">Let's Play</button>
-            
         </div>
-    </div>    
+    </div>   
+    
+    <div class="playing">
+        <div class="container">
+            <button class="hide2" style="display:none">let's play.</button>   
+        </div>
+    </div>
+    
     
 </body>
 </html>
