@@ -38,6 +38,7 @@ $(document).ready(function() {
         $("#player1").fadeIn(500);
         $("#player2").fadeIn(500);
         $(".hide3").fadeIn(3000);
+        $(".hide4").delay(5000).fadeIn(500);
     });
     
 });
